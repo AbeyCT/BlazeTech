@@ -6,5 +6,19 @@
 }
 
 :root {
-    
+    --primary-color: #0E4BF1;
+    --panel-color: #FFF;
+    --text-color: #000;
+    --black-light-color: #707070;
+    --border-color: #E6E5E5;
+    --toggle-color: #DDD;
+    --box1-color: #4DA3FF;
+    --box2-color: #FFE6AC;
+    --box3-color: #E7D1FC;
+    --title-icon-color: #FFF;
+
+    --trans-05: all 0.5s ease;
+    --trans-03: all 0.3s ease;
+    --trans-03: all 0.2s ease;
 }
+
