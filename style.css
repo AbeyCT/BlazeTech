@@ -47,6 +47,7 @@ nav {
     top: 0;
     left: 0;
     padding: 10px 14px;
+    border-right: 2px solid var(--border-color);
     width: 250px;
     height: 100%;
     background-color: var(--panel-color);
@@ -170,5 +171,9 @@ nav .menu-items .mode {
 }
 
 .dashboard {
-    background-color: purple;
+    position: relative;
+    left: 250px;
+    background-color: var(--panel-color);
+    width: calc(100% - 250px);
+    height: 100vh;
 }
