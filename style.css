@@ -29,6 +29,19 @@ body {
     background-color: var(--primary-color);
 }
 
+body.dark {
+    --primary-color: #3A3B3C;
+    --panel-color: #242526;
+    --text-color: #CCC;
+    --black-light-color: #CCC;
+    --border-color: #4D4C4C;
+    --toggle-color: #FFF;
+    --box1-color: #3A3B3C;
+    --box2-color: #3A3B3C;
+    --box3-color: #3A3B3C;
+    --title-icon-color: #CCC;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -76,10 +89,21 @@ nav .menu-items li {
 }
 
 nav .menu-items li a {
+    position: relative;
     display: flex;
     text-decoration: none;
     align-items: center;
     height: 50px;
+}
+
+nav .nav-links li a:hover:before {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: -7px;
+    content: "";
+    border-radius: 50%;
+    background-color: var(--primary-color);
 }
 
 nav .menu-items li a i {
@@ -88,5 +112,59 @@ nav .menu-items li a i {
     height: 100%;
     font-size: 24px;
     justify-content: center;
+    align-items: center;
+    color: var(--black-light-color);
+}
+
+nav .menu-items li a .link-name {
+    font-size: 18px;
+    font-weight: 500px;
+    color: var(--black-light-color);
+}
+
+nav .nav-links li a:hover i,
+nav .nav-links li a:hover .link-name {
+    color: var(--primary-color);
+}
+
+nav .menu-items .mode-toggle {
+    display: flex;
+    position: absolute;
+    height: 50px;
+    min-width: 45px;
+    align-items: center;
+    justify-content: center;
+    right: 14px;
+    cursor: pointer;
+}
+
+nav .menu-items .mode-toggle .switch {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 22px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+}
+
+nav .menu-items .mode-toggle .switch::before {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    content: "";
+    background-color: var(--panel-color);
+    transition: var(--tran-03);
+}
+
+body.dark .switch::before {
+    left: 20px;
+}
+
+nav .menu-items .mode {
+    display: flex;
     align-items: center;
 }
