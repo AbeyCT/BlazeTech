@@ -50,7 +50,12 @@ nav {
     border-right: 1px solid var(--border-color);
     width: 250px;
     height: 100%;
+    transition: var(--trans-05);
     background-color: var(--panel-color);
+}
+
+nav.close {
+    width: 75px;
 }
 
 nav .logo-image {
@@ -75,6 +80,12 @@ nav .logo-name .logo_name {
     font-size: 25px;
     font-weight: 500px;
     color: var(--text-color);
+    transition: var(--trans-05);
+}
+
+nav.close .logo_name {
+    pointer-events: none;
+    opacity: 0;
 }
 
 nav .menu-items {
@@ -121,6 +132,12 @@ nav .menu-items li a .link-name {
     font-size: 18px;
     font-weight: 500px;
     color: var(--black-light-color);
+    transition: var(--trans-05);
+}
+
+nav.close li a .link-name {
+    pointer-events: none;
+    opacity: 0;
 }
 
 nav .nav-links li a:hover i,
@@ -128,10 +145,15 @@ nav .nav-links li a:hover .link-name {
     color: var(--primary-color);
 }
 
-nav .menu-items .mode {
+.menu-items .logout-mode {
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.menu-items .mode {
     display: flex;
     align-items: center;
-    /* border-right: 2px solid var(--border-color); */
+    white-space: nowrap;
 }
 
 nav .menu-items .mode-toggle {
@@ -173,8 +195,39 @@ body.dark .switch::before {
 
 .dashboard {
     position: relative;
+    padding: 10px 14px;
     left: 250px;
-    background-color: var(--panel-color);
     width: calc(100% - 250px);
     height: 100vh;
+    background-color: var(--panel-color);
+    transition: var(--trans-05);
+}
+
+.nav.close ~ .dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    padding: 10px 14px;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 250px);
+    background-color: var(--panel-color);
+    transition: var(--trans-05);
+}
+
+nav.close ~ .dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.dashboard .top .sidebar-toggle {
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
 }
