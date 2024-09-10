@@ -291,7 +291,7 @@ nav.close ~ .dashboard {
 .dash-content .title {
     display: flex;
     align-items: center;
-    margin: 70px 0 30px 0;
+    margin: 60px 0 30px 0;
 }
 
 .dash-content .title i {
@@ -313,4 +313,50 @@ nav.close ~ .dashboard {
     font-weight: 500;
     color: var(--text-color);
     margin-left: 10px;
+}
+
+.dash-content .boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-content .boxes .box {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    flex-direction: column;
+    width: calc(100% / 3 - 15px);
+    padding: 15px 20px;
+    background-color: var(--box1-color);
+}
+
+.box i {
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+.box .text {
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.boxes .box .number {
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.boxes .box.box2 {
+    background-color: var(--box2-color);
+}
+
+.boxes .box.box3 {
+    background-color: var(--box3-color);
+}
+
+.dash-content .activity .activity-data {
+    display: flex;
 }
