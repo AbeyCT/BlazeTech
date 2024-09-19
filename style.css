@@ -58,7 +58,7 @@ nav.close {
     width: 75px;
 }
 
-nav .logo-image {
+/* nav .logo-image {
     display: flex;
     justify-content: center;
     min-width: 45px;
@@ -68,7 +68,7 @@ nav .logo-image img {
     width: 45px;
     object-fit: cover;
     border-radius: 50px;
-}
+} */
 
 nav .logo-name {
     display: flex;
@@ -77,8 +77,12 @@ nav .logo-name {
 
 nav .logo-name .logo_name {
     margin-left: 14px;
-    font-size: 25px;
-    font-weight: 500px;
+    width: 172px;
+    height: 60px;
+    font-family: Nunito;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 43.65px;
     color: var(--text-color);
     transition: var(--trans-05);
 }
@@ -124,19 +128,21 @@ body.dark li a:hover:before {
 
 nav .menu-items li a img {
     display: flex;
+    margin-right: 10px;
     width: 20px;
     height: 20px;
-    font-size: 24px;
     justify-content: center;
     align-items: center;
     color: var(--black-light-color);
 }
 
 nav .menu-items li a .link-name {
-    font-size: 18px;
-    font-weight: 500px;
+    font-size: 22px;
+    font-weight: 500;
     color: var(--black-light-color);
     transition: var(--trans-05);
+    font-family: Nunito;
+    line-height: 30.01px;
 }
 
 nav.close li a .link-name {
@@ -146,11 +152,13 @@ nav.close li a .link-name {
 
 nav .nav-links li a:hover img,
 nav .nav-links li a:hover .link-name {
+    color: var(--title-icon-color);
     color: var(--primary-color);
 }
 
 body.dark .nav-links li a:hover img,
 body.dark .nav-links li a:hover .link-name {
+    color: var(--title-icon-color);
     color: var(--text-color);
 }
 
