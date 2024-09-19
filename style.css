@@ -122,10 +122,10 @@ body.dark li a:hover:before {
     background-color: var(--text-color);
 }
 
-nav .menu-items li a i {
+nav .menu-items li a img {
     display: flex;
-    min-width: 45px;
-    height: 100%;
+    width: 20px;
+    height: 20px;
     font-size: 24px;
     justify-content: center;
     align-items: center;
@@ -144,12 +144,12 @@ nav.close li a .link-name {
     opacity: 0;
 }
 
-nav .nav-links li a:hover i,
+nav .nav-links li a:hover img,
 nav .nav-links li a:hover .link-name {
     color: var(--primary-color);
 }
 
-body.dark .nav-links li a:hover i,
+body.dark .nav-links li a:hover img,
 body.dark .nav-links li a:hover .link-name {
     color: var(--text-color);
 }
