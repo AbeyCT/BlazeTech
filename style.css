@@ -133,7 +133,7 @@ nav .menu-items li a img {
     height: 20px;
     justify-content: center;
     align-items: center;
-    color: var(--black-light-color);
+    background-color: var(--title-icon-color);
 }
 
 nav .menu-items li a .link-name {
@@ -152,13 +152,11 @@ nav.close li a .link-name {
 
 nav .nav-links li a:hover img,
 nav .nav-links li a:hover .link-name {
-    color: var(--title-icon-color);
     color: var(--primary-color);
 }
 
 body.dark .nav-links li a:hover img,
 body.dark .nav-links li a:hover .link-name {
-    color: var(--title-icon-color);
     color: var(--text-color);
 }
 
