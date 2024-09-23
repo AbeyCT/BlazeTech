@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>C.A Wallet</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/background3.jpeg" alt="">
+            </div>
+            <span class="logo_name">BlazeTech</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">
+                        <i class="fas fa-eye"></i>
+                        <span class="link-name" id="dropdownbnt">Sales Opt Mgt</span> </a>
+                        <div class="dropdown-content">
+                          <a href="#">Open Sales</a>
+                          <a href="#">CYM</a>
+                          <a href="#">Deployment</a>
+                        </div>
+                   
+                </li>
+                <li>
+                    <a href="#">
+                      <i class="fas fa-wallet"></i>
+                        <span class="link-name">Wallet</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-credit-card"></i>
+                        <span class="link-name">Transaction History</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <span class="link-name">Referral</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="link-name">Report</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="link-name">Support</span>
+                    </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <i class="fas fa-question-circle"></i>
+                      <span class="link-name">Settings</span>
+                  </a>
+              </li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-regular fa-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-arrows-h-alt sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="fas fa-bell"></i>
+                <input type="text" placeholder="Your Search Here...">
+            </div>
+            <img src="images/background3.jpeg" alt="">
+        </div>
+        <div class="wallet-card">
+            <div class="visa-card">
+              <p>Name <br> Shivara Viam</p>
+              <p>****  ****  ****  1590</p>
+ 
+                <img src="images/logos_visa-Photoroom.png" class="visa-logo" alt="VISA logo">
+            </div>
+          
+            <div class="balance-info">
+                <div class="balance-digit">
+                  <div>
+                    <p>My Balance</p>
+                    <h2>#300,000.00</h2>
+                  </div>
+                  <p>My Balance</p>
+                </div>
+                <div class="graph-container">
+                  <div class="circle-container">
+                    <!-- <img src="images/Chart-Photoroom.png" class="graph" alt="Balance graph"> -->
+                    <canvas class="graph" id="balanceChart" width="400" height="110"></canvas>
+                    <img src="images/GrV3p5-R.png" alt="" class="circle" srcset="">
+                  </div>
+                </div>
+            </div>
+              
+              <div class="wallet-action">
+                <button>Withdrawal</button>
+                <button>Add Money</button>
+              </div>
+     
+
+          <div class="transaction-history">
+                <h2>Transaction History</h2>
+                <div class="sort-options">sort by
+                    <select>
+                        <option>Date</option>
+                        <option>Amount</option>
+                        <option>Status</option>
+                    </select>
+                </div> 
+                 <table>
+                    <thead>
+                        <tr>
+                            <th>Transaction</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Refers</td>
+                            <td>#28,000</td>
+                            <td class="blue">Sent</td>
+                            <td>Sept 19 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Callpoint</td>
+                            <td>#28,000</td>
+                            <td class="orange">Received</td>
+                            <td>Sept 19 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Examian</td>
+                            <td>#28,000</td>
+                            <td class="red">Sent</td>
+                            <td>Sept 19 2024</td>
+                        </tr>
+                        <tr>
+                            <td>9jacan</td>
+                            <td>#28,000</td>
+                            <td class="purple">Pending</td>
+                            <td>Sept 19 2024</td>
+                        </tr>
+                        <tr>
+                            <td>Jafad College of Nursing</td>
+                            <td>#28,000</td>
+                            <td class="green">Received</td>
+                            <td>Sept 19 2024</td>
+                        </tr>
+                    </tbody>
+                </table> 
+          </div>
+        </section>
+          
+          
+
+       
+    
+
+
+    
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

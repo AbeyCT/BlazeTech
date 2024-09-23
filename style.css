@@ -26,7 +26,8 @@
 
 body {
     min-height: 100vh;
-    background-color: var(--primary-color);
+    width:100%;
+    /* background-color: var(--primary-color); */
 }
 
 body.dark {
@@ -359,4 +360,758 @@ nav.close ~ .dashboard {
 
 .dash-content .activity .activity-data {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
+
+.activity .activity-data {
+    display: flex;
+}
+
+.activity-data .data {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 5 - 15px);
+    margin: 0 15px;
+}
+
+.activity-data .data-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.activity-data .data .data-list {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    white-space: nowrap;
+    color: var(--text-color);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  #dropdownbnt {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #431185;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+
+  }
+
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #0E4BF1;
+    color: #ffff;
+    border-radius: 8px;
+
+
+    
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    nav {
+        width: 73px;
+    }
+    nav.close {
+        width: 250px;
+    }
+    nav .logo_name {
+        pointer-events: none;
+        opacity: 0;
+    }
+    nav.close .logo_name {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    nav li a .link-name {
+        pointer-events: none;
+        opacity: 0;
+    }
+    nav.close li a .link-name {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    nav ~ .dashboard {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav.close ~ .dashboard {
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+    nav ~ .dashboard .top {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+    nav ~ .dashboard .top {
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+    .activity .activity-data {
+        overflow-y: scroll;
+    }
+}
+
+
+.wallet-card {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.visa-card, .balance-info {
+  flex-basis: calc(50% - 20px);
+  max-width: 100%;
+}
+
+/* .wallet-card {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  } */
+  
+  .visa-card {
+    background-color: rgba(85, 157, 253, 1);
+    padding: 20px;
+    flex-basis: calc(50% - 20px);
+    color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 15rem;
+    max-width: 100%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+  }
+  
+  .visa-card p {
+    font-size: 18px;
+    margin: 0;
+    text-align: left; 
+  }
+  
+  .visa-card .visa-logo {
+    max-width: 40%; 
+    height: auto;
+    margin: 0; 
+    align-self: flex-end; 
+  }
+  
+  .balance-info {
+    background-color: rgba(97, 178, 228, 1);
+    padding: 20px;
+    flex-basis: calc(50% - 20px);
+    flex-wrap: wrap;
+    border-radius: 15px;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    max-width: 600px; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .balance-digit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .balance-digit h2 {
+    background: linear-gradient(to right, rgba(0, 69, 255, 1), rgba(241, 35, 9, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+  }
+  
+  .graph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .balance-info .graph {
+    margin: 0 0 20px 0; 
+    max-width: 100%;
+  }
+  
+  .circle-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .circle-container .circle {
+    position: absolute;
+    bottom: -35px; 
+    right: 0;
+    max-width: 80px; 
+    width: 100%;
+  }
+  
+ 
+  
+    .circle-container .circle {
+      max-width: 60px; 
+    }
+
+  
+  
+  .wallet-action {
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 1rem;
+    margin-left: 38rem;
+  }
+  
+  .wallet-action button {
+    background-color: rgba(16, 56, 253, 1);
+    padding: 10px;
+    font-size: 15px;
+    width: auto;
+    min-width: 150px;
+    margin: 10px;
+    color: #ffff;
+    border-radius: 10px;
+  }
+  
+  .wallet-action button:hover {
+    background-color: #242526;
+  }
+  /* Media Queries */
+  
+  /* @media (max-width: 768px) {
+    .wallet-card {
+      flex-direction: column;
+    }
+    .visa-card, .balance-info {
+      flex-basis: 100%;
+    }
+    .circle-container {
+      margin-top: 0;
+    }
+    .wallet-action {
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .wallet-card {
+      padding: 10px;
+    }
+    .visa-card, .balance-info {
+      padding: 10px;
+    }
+    .balance-digit h2 {
+      font-size: 16px;
+    }
+    .circle {
+      width: 20px;
+      height: 20px;
+    }
+    .wallet-action button {
+      min-width: 100px;
+    }
+  } */
+
+
+.transaction-history {
+    background-color: #ffff;
+    margin-top: 4rem;
+    padding:  70px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.sort-options{
+    margin-left: 47rem;
+}
+
+.transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history th, .transaction-history td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+.blue{
+    color: blue;
+}
+
+.orange{
+    color: orange;
+}
+.purple{
+    color: purple;
+}
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+
+
+/* Adjustments for Tablet Screens */
+@media (max-width: 1024px) {
+  .wallet-card {
+      flex-direction: column;
+  }
+
+  .visa-card, .balance-info {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+     }
+
+  .wallet-action {
+      justify-content: center; 
+      margin-left: 0; 
+  }
+
+  .sort-options {
+      margin-left: 0; 
+      text-align: center; 
+  }
+}
+
+/* Adjustments for Mobile Phones */
+@media (max-width: 768px) {
+  .wallet-action {
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .wallet-action button {
+      width: 100%;
+      min-width: auto; 
+  }
+
+  .balance-digit h2 {
+      font-size: 1.5rem; 
+  }
+
+  .circle-container .circle {
+      max-width: 60px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .wallet-card {
+      padding: 10px;
+  }
+
+  .visa-card, .balance-info {
+      padding: 10px;
+  }
+
+  .balance-digit h2 {
+      font-size: 1.25rem; 
+  }
+
+  .wallet-action button {
+      padding: 8px; 
+      font-size: 14px; 
+  }
+
+  .circle {
+      width: 20px;
+      height: 20px;
+  }
+}
+
+
+
+
+
+
+
+/* Referral css */
+
+.stats {
+    display: flex;
+    color: white;
+    margin-top: 5rem;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .stat-box {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    margin: 0 10px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #004AAD 0%, #559DFD 100%);
+    
+  }
+  .stat-box img{
+    width: 30%;
+  }
+
+  .stat-box:hover{
+    background: linear-gradient(180deg, #9747FF 0%, #559DFD 100%);
+    transition: 0.3s ease-in-out;
+
+  }
+  
+  .stat-box h3 {
+    margin-top: 10px;
+    
+  }
+
+
+
+.invite {
+    text-align: center;
+  }
+  
+  .copy-link {
+    position: relative;
+    width: 100%;
+  }
+  
+  .copy-link input {
+    width: 80%;
+    padding: 10px;
+    border: 3px solid #ddd;
+    border-radius: 5px;
+    border: 3px solid #ddd;
+  }
+  
+  .copy-link button {
+    position: absolute;
+    height: 40px;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    background: rgba(85, 157, 253, 1);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .copy-link button:hover{
+    background: #000;
+    color: #fff;
+  }
+  
+  form input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  form button {
+    width: 40%;
+    padding: 10px;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(85, 157, 253, 1);
+    margin-bottom: 2rem;
+
+  }
+  form button:hover{
+    background: #000;
+    color: #fff;
+  }
+
+  @media (max-width: 1440px) {
+    
+    .copy-link button {
+      right: 120px;
+    
+    } 
+  }
+
+  @media (max-width: 1024px) {
+    
+    .copy-link button {
+      right: 80px;
+    
+    } 
+  }
+
+
+  @media (max-width: 768px) {
+    
+  
+    .stats {
+      flex-direction: column;
+    }
+  
+    .stat-box {
+      margin-bottom: 10px;
+    }
+
+    .stat-box img{
+      width: 20%;
+    }
+
+    .copy-link {
+        flex-direction: column;
+      }
+    
+      .copy-link button {
+        margin-top: 10px;
+      }
+
+      .copy-link button {
+        position: absolute;
+        height: 40px;
+        right: 73px;
+        top: 15px;
+      
+      } 
+    
+      .inviteFirends{
+        margin-top: 2rem;
+      }
+}
+
+
+
+@media (max-width: 480px) {
+ 
+
+  .sales-box {
+    max-width: 100%;
+  }
+
+    
+
+    .invite p{
+      font-size: 12px;
+    }
+
+    
+    
+    .copy-link input {
+      width: 85%;
+      font-size: 9px;
+      
+    }
+
+    
+    
+     .copy-link button {
+      position: relative;
+      height: 40px;
+      right: 5px;
+      margin-top: 2rem;
+    
+    } 
+
+    .inviteFirends{
+      margin-top: 1rem;
+    }
+}
+     
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sales Report */
+.sales-stats {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.sales-box {
+  background: rgba(85, 157, 253, 1);
+  color: white;
+  height: 9rem;
+  margin: 1rem;
+  width: 100%;
+  max-width: 30%;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  
+  /* Center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart {
+  width: 45%;
+}
+
+
+.sales-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding-bottom: 10rem;
+  
+}
+
+.profit-box {
+  background: rgba(85, 157, 253, 1);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.top-selling {
+  background: rgba(85, 157, 253, 1);
+  color: #fff;
+  border-radius: 5px;
+  width: 60%;
+}
+
+.top-selling table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.top-selling table th, .top-selling table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .statistics {
+      flex-direction: column;
+  }
+
+  .charts {
+      flex-direction: column;
+  }
+
+  .chart-container {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px){
+
+  .sales-box {
+    max-width: 45%;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  
+
+  .sales-box {
+    max-width: 100%;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header input[type="search"] {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .user-info {
+        margin-top: 10px;
+    }
+
+    .charts {
+        flex-direction: column;
+    }
+
+    .chart-container {
+        width: 100%;
+    }
+
+    .top-selling table th,
+    .top-selling table td {
+        padding: 8px;
+    }
+   
+}
+     
